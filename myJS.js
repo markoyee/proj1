@@ -4,8 +4,7 @@ $(document).ready(function () {
     var lyrOSM = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png');
     mymap.addLayer(lyrOSM);
     
-    var mymap2 = L.map('odp', {center: [52.1, 21.0], zoom: 10, zoomControl: false, attributionControl: false});
-    mymap2.addLayer(lyrOSM);
+
     //tworze zmienna w postacie mojej ikonki.
     var myicon=L.icon({
         iconUrl: 'img/platoon.png',
