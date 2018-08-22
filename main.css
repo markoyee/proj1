@@ -1,0 +1,45 @@
+body 
+{
+    margin:0;
+    background-color: black;
+    color: #4286f4;
+    text-align: center;
+    text-transform: capitalize;
+    
+}
+h1
+{
+    font-size: 50px;
+    margin-top:40px;
+    margin-bottom:20px;
+}
+
+.container
+{
+    margin:auto;
+    width:900px;
+    height:300px;
+}
+.box
+{
+    height: 100%;
+    width: 50%;
+    border:3px blue solid; 
+    float:left;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom:20px;
+}
+
+.odpowiedz
+{
+    font-size: 20px;
+    text-align: center;
+    height: 200px;
+    margin-bottom: 10px;
+    border: 2px grey solid;
+}
+
+#tekst
+{
+    color:slategray;
+}
