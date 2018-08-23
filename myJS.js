@@ -5,15 +5,17 @@ $(document).ready(function () {
     var lyrOSM = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png'),
         lyrORTO = L.tileLayer.wms("http://mapy.geoportal.gov.pl/wss/service/img/guest/ORTO/MapServer/WMSServer", {layers: "Raster", format: 'image/png', transparent : 'true', version : '1.1.1'}),    
         lyrSozo = L.tileLayer.wms("http://mapy.geoportal.gov.pl/wss/service/img/guest/SOZO/MapServer/WMSServer", {layers: "Raster", format: 'image/png', transparent : 'true', version : '1.1.1'}),
+        lyrBDOT = L.tileLayer.wms("http://localhost:8080/geoserver/Proj1/wms", {layers: "Proj1:BUBD_A", format: 'image/png', transparent : 'true', version : '1.1.1'}),
         // przypisuję do zmiennej mymap obiekt mapa z klasy map
-        mymap = L.map('mymap', {center: [52.1, 21.0], zoom: 10, zoomControl: false, attributionControl: false});
+        mymap = L.map('mymap', {center: [52.1289, 22.227], zoom: 10, zoomControl: false, attributionControl: false});
 
     mymap.addLayer(lyrOSM);
         
     var baseMaps = {
         "Openstreetmap": lyrOSM,
         "Ortofotomapa": lyrORTO,
-        "Mapa Sozologiczna": lyrSozo
+        "Mapa Sozologiczna": lyrSozo,
+        "BDOT Siedlce": lyrBDOT
       };
     
     //polecenie dodania ikonki 
@@ -29,6 +31,11 @@ $(document).ready(function () {
         popupAnchor: [0, 0],
     });
 
+    
+    //dodaje skale
+    L.control.scale().addTo(mymap);
+    
+    
     //okodowanie ppm
     mymap.on('contextmenu', function (e) {
        
