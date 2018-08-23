@@ -6,7 +6,11 @@
 	<title>main web page</title>
 	<meta name="description" content="JS script to send coordinates do postgres db">
 	<meta name="keywords" content="javascript, jQuery, Leaflet, MyData">
-	<meta name="author" content="MW">
+	<meta name="author" content="MarekW">
+	
+	<!-- wstawianie linkow css-->
+	<!-- eleemnt z biblioteki bootstrap zapewnia dostosowanie szerokości do urządzenia-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
 	
@@ -46,7 +50,10 @@
     </main>
     
     <!-- biblioteki js-->
+    <!--jquery musi być podpięte przed bootstrapem -->
     <script src="lib/jquery/jquery-3.3.1.min.js"></script>
+    <!-- poniżej zabezpieczenie przed zmanipulowanym kodem, dodatkowe nagłówki, do ładowania zawartości z jednej strony, z biblioteki bootstrap i musi się przed nią znaleść-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="lib/bootstrap/bootstrap.min.js"></script>
     <script src="lib/leaflet/leaflet.js"></script>
     <script src="myJS.js"></script>	
