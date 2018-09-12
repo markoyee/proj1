@@ -17,10 +17,18 @@ h1
 .container
 {
     margin:auto;
-    
- 
+    width:900px;
+    height:300px;
 }
-
+.box
+{
+    height: 100%;
+    width: 50%;
+    border:3px blue solid; 
+    float:left;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom:20px;
+}
 
 .odpowiedz
 {
